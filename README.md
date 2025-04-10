@@ -18,7 +18,7 @@ We introduce Masked Autoencoder (MAE)-based representations for MALDI-TOF MS dat
 
 ---
 ## ⚙️ Install the dependencies
-Clone the repository and install the necessary dependencies listed in the requirements.txt file
+Clone the repository, unzip OriginalData.zip, and install the necessary dependencies listed in the requirements.txt file
 
 ```bash
 pip install -r requirements.txt
@@ -81,10 +81,10 @@ For each specified dataset-year (e.g., `A2015`, `B2018`), the script generates:
 
 ```bash
 python3 code/preprocessing.py \
-  --base_data_dir /Users/yourname/Documents/DRIAMS \
-  --working_dir /Users/yourname/Documents/AMRencoding/standaloneCode \
-  --long_table_A_path /path/to/DRIAMS-A_ws_long_table.csv \
-  --long_table_all_path /path/to/DRIAMS_combined_long_table.csv \
+  --base_data_dir /path/to/DRIAMS \
+  --working_dir /path/to/ZeroShotAMR \
+  --long_table_A_path OriginalData/DRIAMS-A_ws_long_table.csv \
+  --long_table_all_path OriginalData/DRIAMS_combined_long_table.csv \
   --dataset_years A2015 A2016 A2017 A2018 B2018 C2018 D2018 \
   --encoding_dim 512 \
   --epochs 2 \
@@ -112,7 +112,7 @@ In `output/<experiment_group>/<experiment_name>_results/`, the script generates:
 |-------------------------|-------------------------------------------------------------------------------------------------|
 | `--driams_long_table`   | Path to the metadata file for the current dataset.                                              |
 | `--spectra_matrix`      | Path to the input mass spectra (either raw or MAE-encoded).                                     |
-| `--sample_embedding_dim`| Dimension of the spectra input (6000 for raw, or same as --encoding_dim for MAE).               |
+| `--sample_embedding_dim`| Dimension of the spectra input (6000 for raw, or same as <encoding_dim> for MAE).               |
 | `--drugs_df`            | Path to the antimicrobial compound encoding file.                                               |
 | `--fingerprint_class`   | Type of encoding: `'morgan_1024'`, `'molformer_github'`, or `'selfies_flattened_one_hot'`.      |
 | `--fingerprint_size`    | Size of the encoding: 1024 (Morgan), 768 (Molformer), or 24160 (SELFIES).                       |
