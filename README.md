@@ -3,7 +3,7 @@
 
 This repository contains the code used for the experiments in the paper:
 
-**_Rapid zero-shot prediction of antimicrobial resistance using enhanced feature representations of MALDI-TOF spectra_**  
+**_Generalizable machine learning models for rapid antimicrobial resistance prediction in unseen healthcare settings_**  
 by *Diane Duroux, Paul P. Meyer, Giovanni Visonà, and Niko Beerenwinkel*.
 
 ---
