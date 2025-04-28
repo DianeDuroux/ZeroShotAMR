@@ -1,5 +1,5 @@
 
-# 📄 Rapid Zero-Shot Prediction of Antimicrobial Resistance Using Enhanced Feature Representations of MALDI-TOF Spectra
+# 📄 Generalizable machine learning models for rapid antimicrobial resistance prediction in unseen healthcare settings
 
 This repository contains the code used for the experiments in the paper:
 
