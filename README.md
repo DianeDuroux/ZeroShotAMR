@@ -25,14 +25,20 @@ pip install -r requirements.txt
 ```
 ---
 
-## ⚙️ DRIAMS Preprocessing Pipeline
+## 🗂️ DRIAMS dataset
 
 The MALDI-TOF spectra used to reproduce the experiments can be obtained by downloading the DRIAMS dataset from:  
 🔗 [https://datadryad.org/stash/dataset/doi:10.5061/dryad.bzkh1899q](https://datadryad.org/stash/dataset/doi:10.5061/dryad.bzkh1899q)
 
-This script preprocesses the DRIAMS dataset by performing data splitting and encoding MALDI-TOF spectra using a Masked Autoencoder. It prepares the data for downstream AMR prediction tasks.
+Instructions:
 
-### 🗂️ DRIAMS Dataset Directory Structure
+1. Download the most recent versions of DRIAMS A, B, C, and D (`tar.gz`).
+
+2. For each dataset (A–D), the binned mass spectra used in this analysis are located in the `binned_6000/` folder.
+
+3. Inside each yearly subfolder, you will find the mass spectra of individual samples, with filenames corresponding to their unique sample IDs.
+
+### Directory Structure
 
 ```
 /DRIAMS/
@@ -45,6 +51,10 @@ This script preprocesses the DRIAMS dataset by performing data splitting and enc
 ├── DRIAMS-C/
 └── DRIAMS-D/
 ```
+
+## ⚙️ DRIAMS Preprocessing Pipeline
+
+This script preprocesses the DRIAMS dataset by performing data splitting and encoding MALDI-TOF spectra using a Masked Autoencoder. It prepares the data for downstream AMR prediction tasks.
 
 ### 📦 Output Files
 
