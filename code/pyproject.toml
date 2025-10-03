@@ -1,0 +1,25 @@
+[project]
+name = "zeroshotamr"
+version = "0.1.0"
+description = "Reproducible setup with uv"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "numpy==1.26.4",
+  "pandas==2.2.3",
+  "scikit-learn==1.2.2",
+  "shap==0.43.0",
+  "tensorflow==2.17.0",
+  "torch==2.1.1",
+  "tqdm==4.65.0",
+  "pytorch-lightning==2.1.2",
+]
+
+[tool.uv]
+# Only resolve for Windows 
+environments = [
+  "sys_platform == 'win32'",
+  "sys_platform == 'linux'",
+  "sys_platform == 'darwin'",
+]
+# And require that wheels exist for Windows for sdists-less packages
+required-environments = ["sys_platform == 'win32'"]
