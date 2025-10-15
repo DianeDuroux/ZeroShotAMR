@@ -18,11 +18,38 @@ We introduce Masked Autoencoder (MAE)-based representations for MALDI-TOF MS dat
 
 ---
 ## ⚙️ Install the dependencies
-Clone the repository, unzip OriginalData.zip, and install the necessary dependencies listed in the requirements.txt file
+You can set up the project with either pip or uv.
+
+### Option A - pip:
+Install the necessary dependencies listed in the requirements.txt file
 
 ```bash
 pip install -r requirements.txt
 ```
+
+### Option B - uv:
+We provide pyproject.toml and uv.lock for macOS, Windows, and Linux.
+
+Note: On a Linux or non-apple silicon  please use the pyproject.toml file for Mac and rewrite the uv.lock after installation. 
+
+```bash
+# 0) Install uv (one-time)
+# mac/linux:
+curl -LsSf https://astral.sh/uv/install.sh | sh
+# windows (PowerShell):
+iwr https://astral.sh/uv/install.ps1 -UseBasicParsing | iex
+ 
+# 1) Ensure the pinned Python is available (adjust if your pyproject pins a version)
+uv python install 3.11
+ 
+# 2) Create the exact environment from the lockfile
+uv sync --frozen
+ 
+# 3) Run your code within the env
+uv run python -V
+uv run python your_script.py
+```
+
 ---
 
 ## 🗂️ DRIAMS dataset
